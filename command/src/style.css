@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+#toolbar {
+	background-color: transparent;
+	width: 100%;
+	height: 200px;
+	position: absolute;
+  display: inline-block;
+	top: 0;
+	left: 0;
+}
