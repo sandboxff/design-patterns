@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export class ThreeManager {
+export class ThreeReciever {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     renderer = new THREE.WebGLRenderer();
@@ -31,6 +31,12 @@ export class ThreeManager {
         return this.renderer
     }
     setCubeColor(color: string) {
-        this.cube.material.color.setHex(parseInt(color, 16))
+        this.cube.material.color.setHex(parseInt(color.substring(1), 16))
+        console.log(color);
+        console.log(parseInt(color, 16));
+        console.log(this.cube.material.color);
+    }
+    setCameraDistance(distance: number) {
+        this.camera.position.z = distance
     }
 }

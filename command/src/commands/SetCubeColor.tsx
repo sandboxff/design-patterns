@@ -1,17 +1,19 @@
-import { ThreeManager } from "../components/ThreeManager";
+import { ThreeReciever } from "../components/ThreeReciever";
 import { Command } from "../interfaces/Command";
 
 export class SetCubeColor implements Command {
 
-    manager: ThreeManager
+    reciever: ThreeReciever
     color: string
 
-    constructor(manager: ThreeManager, color: string) {
-        this.manager = manager
+    constructor(reciever: ThreeReciever, color: string) {
+        this.reciever = reciever
         this.color = color
     }
 
     execute(): void {
-        this.manager.setCubeColor(this.color)
+        this.reciever.setCubeColor(this.color)
+        console.log(this.color);
+        
     }
 }
