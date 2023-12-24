@@ -11,10 +11,6 @@ export class SetCameraDistance implements Command {
         this.distance = distance
     }
 
-    setDistance(distance: number) {
-        this.distance = distance
-    }
-
     execute(): void {
         this.reciever.setCameraDistance(this.distance)
     }
